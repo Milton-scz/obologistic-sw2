@@ -43,7 +43,7 @@
 
                         <td style="text-align: center;">
                         <x-custom-button :url="'admin-ruta/show/'" :valor="$ruta" >{{ __('Show') }}</x-custom-button>
-                        <x-custom-button :url="'admin-ruta/edit/'" :valor="$ruta" >{{ __('Editar') }}</x-custom-button>
+
                         <x-danger-button x-data="" x-on:click.prevent="$dispatch('open-modal','{{$ruta->id}}')">{{ __('Eliminar') }}</x-danger-button>
                         <x-modal name='{{$ruta->id}}' :show="$errors->userDeletion->isNotEmpty()" focusable>
                         <form method="POST" action="{{ route('admin.ruta.destroy', ['ruta_id' => $ruta->id]) }}" class="p-6">

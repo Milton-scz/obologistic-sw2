@@ -148,6 +148,71 @@
         </div>
 
     </div>
+    <footer class="p-2 md:p-4 rounded-lg shadow bg-gray-600 text-white">
+    <div class="sm:flex sm:items-center sm:justify-between">
+        <div class="col-md-6 col-lg-3 ml-8">
+            <h5 class="text-white mb-4">Contacto</h5>
+            <p><i class="fa fa-map-marker-alt me-3"></i>Santa Cruz, Bolivia</p>
+            <p>
+                <div class="contact-info">
+                    <a href="https://wa.me/59176644887" target="_blank" class="text-white hover:text-gray-300">
+                        <i class="fab fa-whatsapp"></i>+591 76644887
+                    </a>
+                </div>
+            </p>
+            <p><i class="fa fa-envelope me-3"></i>info@tecnosoft.com</p>
+        </div>
+        <div>
+            <ul class="flex flex-col sm:flex-row sm:space-x-4">
+                <li><a href="#" x-data="" x-on:click.prevent="$dispatch('open-modal','#')">Términos y Condiciones</a></li>
+                 <!-- Modal -->
+                 <x-modal name='#' :show="$errors->userDeletion->isNotEmpty()" focusable>
+    <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+        <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+            Términos y condiciones
+        </h2>
+        <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">
+            Referentes al servicio de OBO LOGISTIC.
+        </p>
+        <div class="space-y-4 text-sm text-gray-600 dark:text-gray-400">
+            <p>
+                Condiciones de utilización del Servicio de OBO LOGISTIC.
+            </p>
+            <p>
+                El Usuario solicita a OBO Logistic la recepción y el transporte de bienes, desde la ciudad de Miami (EE.UU) a las oficinas de OBO Logistic en la ciudad de destino, y su reparto opcional en el domicilio que indique el Usuario.
+            </p>
+            <p>
+                OBO Logistic proporcionará al Usuario una dirección física en Miami (EE.UU), a donde éste podrá enviar los bienes adquiridos. Una vez que el Usuario haya utilizado la dirección que OBO Logistic le asignó, la empresa no podrá rechazar la recepción de su compra ni cancelar el transporte del paquete, como así tampoco podrá alterar el destino final del mismo.
+            </p>
+            <p>
+                OBO Logistic no se responsabiliza por demoras de terceros en lo que refiere a la recepción de los bienes adquiridos. Bajo ninguna circunstancia OBO Logistic se hará responsable por paquetes recibidos en malas condiciones en Miami (EE.UU) o en las oficinas en el país de destino, que presenten daños directos o indirectos, especiales o incidentales de cualquier naturaleza que fueran consecuencia de mal manejo por parte de terceros, negligencia o cualquier otra acción.
+            </p>
+            <p>
+                El Usuario autoriza a OBO Logistic o a quien esta designe, a inspeccionar su carga en caso de que las autoridades aduaneras nacionales y/o internacionales así lo soliciten.
+            </p>
+            <p>
+                Una vez recibidos los bienes en Miami (EE.UU), OBO Logistic se encargará de remitirla a sus oficinas en su país de destino, en un plazo aproximado de entre 10 a 15 días hábiles, pudiendo extenderse por motivos ajenos al servicio ofrecido, sin que ello pudiera ocasionar algún tipo de responsabilidad para OBO Logistic. OBO Logistic efectuará, con los alcances de los presentes Términos y Condiciones, todos los trámites y diligencias necesarias para el envío de los bienes hasta sus oficinas en su país de destino.
+            </p>
+        </div>
+        <div class="mt-6 flex justify-end">
+            <x-secondary-button x-on:click="$dispatch('close')">
+                {{ __('Cancelar') }}
+            </x-secondary-button>
+        </div>
+    </div>
+</x-modal>
+
+
+                <li><a href="/contacto" class="hover:underline text-white">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr class="my-4 border-orange-700 lg:my-6" />
+    <span class="block text-sm sm:text-center text-white">&copy; 2024 <a href="https://obologistic.com" target="_blank" class="hover:underline">Obologistic™</a>. All Rights Reserved.</span>
+
+
+</footer>
+
 
 </body>
 </html>
